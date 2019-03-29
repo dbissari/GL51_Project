@@ -5,6 +5,7 @@ plugins {
 
 apply plugin:"application"
 apply plugin:"groovy"
+apply plugin:"eclipse"
 
 version "0.1"
 group "projet.gl51"
