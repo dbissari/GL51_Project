@@ -12,20 +12,21 @@ class MemoryProductStorage implements ProductStorage {
 
 	@Override
 	void update(String id, Product p) {
-		// TODO Auto-generated method stub
-
+		Integer productIndex = products.findIndexOf { it.id == id }
+		p.id = id;
+		products.set(productIndex, p)
 	}
 
 	@Override
 	Product getByID(String id) {
-		// TODO Auto-generated method stub
-		return null;
+		Product product = products.find { it.id == id }
+		if (product == null) throw new NotExistingProductException()
+		product
 	}
 
 	@Override
 	void delete(String id) {
-		// TODO Auto-generated method stub
-
+	    products.removeIf {it.id==id}
 	}
 
 	@Override
