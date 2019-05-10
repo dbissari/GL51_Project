@@ -2,10 +2,10 @@ package projet.gl51.store
 
 class MemoryProductStorage implements ProductStorage {
 	
-	private List<Product> products
+	private List<Product> products = []
 
 	MemoryProductStorage(){
-		products = []
+
 	}
 
 	@Override
