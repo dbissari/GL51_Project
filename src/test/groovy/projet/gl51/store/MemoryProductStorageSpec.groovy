@@ -7,11 +7,6 @@ class MemoryProductStorageSpec extends Specification {
     ProductStorage storage = new MemoryProductStorage()
 	Product beforeProduct = new Product(name: name, description: description, price: price, idealTemperature: idealTemperature)
 
-
-	void setup(){
-
-	}
-
 	void "empty storage returns empty list"() {
 		expect:
 		storage.all() == []
