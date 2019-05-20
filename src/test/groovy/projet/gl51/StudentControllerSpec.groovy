@@ -18,18 +18,11 @@ class StudentControllerSpec extends Specification {
 
 
     void "test index"() {
-		/*
-        given:
-        HttpResponse response = client.toBlocking().exchange("/student")
-
-        expect:
-        response.status == HttpStatus.OK
-        */
 		when:
 		List<Student> students = client.toBlocking().retrieve(HttpRequest.GET('/student'), Argument.listOf(Student).type)
 		
 		then:
-		students.get(0).toString() == "[firstName:Déromba, lastName:Bissari]"
+		students.get(0).toString() == "[firstName:DÃ©romba, lastName:Bissari]"
 		students.get(1).toString() == "[firstName:Arona, lastName:Gueye]"
     }
 }

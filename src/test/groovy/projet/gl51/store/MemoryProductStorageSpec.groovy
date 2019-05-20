@@ -23,6 +23,7 @@ class MemoryProductStorageSpec extends Specification {
 		List<Product> afterProducts = products.findAll { it.id == productId }
 		
 		then:
+		productId != ""
 		products.size() == beforeSize + 1
 		afterProducts.size() == 1
 		beforeProduct.equals(afterProducts[0])
