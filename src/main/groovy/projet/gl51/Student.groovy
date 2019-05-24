@@ -1,6 +1,8 @@
-package projet.gl51;
+package projet.gl51
 
-public class Student {
+import groovy.transform.ToString
+
+class Student {
 	String firstName
 	String lastName
 }
